@@ -1,0 +1,10 @@
+#wrapper-message{
+  margin-left: 20px;
+  border: 1px solid white;
+  width: 250px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(131, 141, 150);
+  margin-top: 20px;
+}
+

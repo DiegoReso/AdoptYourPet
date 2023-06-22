@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <%-include ('partials/head.ejs')  %>
+</head>
+<body>
+
+  <%-include ('partials/nav.ejs')  %>
+
+  <div id="wrapper-all">
+    
+    <h2><%=title  %></h2>
+    <form action="/edit/<%=user._id %>" method="POST">
+      <div>
+        
+        <% if(typeof message  !==  'undefined'){%>
+          <%=message%>
+        <% } %>
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" placeholder="Nome do Pet" value="<%= user.name %>" required>
+      </div>
+  
+      <div>
+        <label for="age">Idade</label>
+        <input type="text" name="age" id="age" placeholder="Idade do Pet" value="<%= user.age %>" required>
+      </div>
+  
+  
+      <div>
+        <label for="pet">Pet</label>
+        <input type="text" name="pet" id="pet" placeholder="Ex.: gato | cachorro | papagaio" value="<%= user.pet %>" required>
+      </div>
+  
+      <div>
+        <button type="submit">Editar</button>
+      </div>
+  
+    </form>
+</div>
+
+  
+
+
+<%-include ('partials/footer.ejs')  %>
+</body>
+</html>

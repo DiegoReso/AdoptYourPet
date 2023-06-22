@@ -1,0 +1,27 @@
+#wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  margin: 0 auto;
+  gap: 10px;
+  
+}
+
+#card{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(25, 0, 253, 0.26);
+  padding: 20px;
+  border-radius:90% 10% 93% 7% / 0% 98% 0% 98% ;
+  box-shadow: 1px 1px 2px rgb(255, 255, 255);
+}
+
+#edit,#remove{
+  width: 30px;
+  margin-left: 25px;
+}
+
+#card img{
+  border-radius: 5px;
+  
+}

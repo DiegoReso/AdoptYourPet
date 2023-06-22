@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <%-include ('partials/head.ejs')  %>
+</head>
+<body>
+
+
+
+  <%-include ('partials/nav.ejs')  %>
+<div id="wrapper-all">
+  
+   <h2><%= title  %></h2>
+    <div id="wrapper">
+  
+    <% users.forEach((user) => {%>
+  
+        <div id="card">
+          <img src="https://source.unsplash.com/random/140x140/?<%= user.pet%>" alt="pet-image">
+          <p>Nome: <%= user.name%></p>
+          <p>Idade: <%= user.age%></p>
+          <p>Pet: <%= user.pet%> </p>
+          <div>
+            <a href="/edit?id=<%= user._id %>"><img id="edit" src="/images/edit.png" alt="icon-edit"></a>
+            <a href="/remove/<%= user._id %>"><img id="edit" src="/images/remove.png" alt="icon-edit"></a>
+          </div>
+        </div>
+        <%})  %>
+  
+    </div>
+  
+</div>
+
+<%-include ('partials/footer.ejs')  %>
+</body>
+</html>
