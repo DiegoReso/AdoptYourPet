@@ -13,3 +13,5 @@ Nodemon
 Express
 
 Mongoose
+
+EJS
